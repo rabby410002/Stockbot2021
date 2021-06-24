@@ -35,7 +35,7 @@ def delete_user_stock_fountion(stock):
 #----------------------------秀出使用者的股票--------------------------
 def show_user_stock_fountion():  
     db=constructor()
-    collect = db['mystock']
+    collect = db['mydb']
     cel=list(collect.find({"data": 'care_stock'}))
 
     return cel
