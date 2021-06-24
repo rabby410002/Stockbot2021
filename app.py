@@ -42,6 +42,8 @@ def callback():
 #訊息傳遞區塊
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    message = TextSendMessage(text=event.message.text)
+    line_bot_api.reply_message(event.reply_token,message)
     ### 抓到顧客的資料 ###
     profile = line_bot_api.get_profile(event.source.user_id)
     uid = profile.user_id #使用者ID
