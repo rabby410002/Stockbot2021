@@ -18,7 +18,7 @@ def constructor():
 #----------------------------儲存使用者的股票--------------------------
 def write_user_stock_fountion(stock, bs, price):  
     db=constructor()
-    collect = db['mystock']
+    collect = db['mydb']
     collect.insert({"stock": stock,
                     "data": 'care_stock',
                     "bs": bs,
@@ -29,7 +29,7 @@ def write_user_stock_fountion(stock, bs, price):
 #----------------------------殺掉使用者的股票--------------------------
 def delete_user_stock_fountion(stock):  
     db=constructor()
-    collect = db['mystock']
+    collect = db['mydb']
     collect.remove({"stock": stock})
     
 #----------------------------秀出使用者的股票--------------------------
