@@ -10,6 +10,8 @@ from linebot.exceptions import (
 from linebot.models import *
 
 import re
+import mongodb
+
 
 app = Flask(__name__)
 
